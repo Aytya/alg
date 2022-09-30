@@ -1,0 +1,33 @@
+"Answer 1:
+      1) Π ID, person_name (σcompany_name = “BigBank” (works)) 
+      2) Π ID, person_name, city (employee  ⋈(σcompany_name = “BigBank” (works))) 
+	Π ID,person_name, street, city  (σcompany_name = “BigBank” ∧ salary > 10000) ⋈ works employee) 
+	Π ID, person-name (employee⋈works⋈ company) 
+
+
+
+Answer 2:
+	Π ID, person_name (σcompany_name ̸≠ “BigBank”(works)) 
+	Π ID, person_name(employee) – Πperson_name (σcompany_name  =“BigBank”)(works))
+
+
+ID	name	dept_name	salary
+22222	Almaty	History	96000
+12212	Karina	Biology	180000
+34452	Crick	History	89000
+
+
+
+Answer 3:
+Insert:
+(03659, Ayazhan, IT, 500000)
+It is error ,because department table does not have the IT department.
+
+Delete:
+(03659, Ayazhan, IT, 500000)
+Well delete (IT, Asan ,400000) from department . But , it would give an error cause instructor’s department referencing to the department with no ‘IT’.
+Answer 4: underline primary key
+employee (ID, person_name , street , city)
+works (ID , person_name , compamy_name ,salary)
+company (company_name, city)
+"
